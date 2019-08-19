@@ -5,13 +5,13 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UserService {
-  users = ['Ala', 'Ma', 'Kota'];
+  users = ['Ala', 'Ma', 'Kota','Ala', 'Ma', 'Kota','Ala', 'Ma', 'Kota','Ala', 'Ma', 'Kota','Ala', 'Ma', 'Kota','Ala', 'Ma', 'Kota','Ala', 'Ma', 'Kota','Ala', 'Ma', 'Kota','Ala', 'Ma', 'Kota'];
 
   getUsers(): Observable<string[]> {
     const obs = new Observable<string[]>(subscriber => {
       setTimeout(() => {
         subscriber.next(this.users);
-      }, 5000);
+      }, 2000);
     });
     return obs;
   }

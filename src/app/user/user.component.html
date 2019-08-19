@@ -1,3 +1,13 @@
-<div *ngFor="let user of users">
-  {{ user }}
+<div class="flex-container" cdkDropListGroup>
+  <div class="flex" cdkDropList cdkDropListOrientation="horizontal" >
+    <div cdkDrag class="yellow" *ngFor="let user of users">
+      <div>{{ user }}</div>
+    </div>
+  </div>
 </div>
+<textarea #textBox id="textBox" cols="30" rows="10" class="form-control"></textarea>
+<div #results id="results"></div>
+
+<h1>Typeahead</h1>
+<input #typeaheadInput type="text" class="form-control" id="typeahead-input" placeholder="Enter a US state" autofocus>
+<div #typeaheadContainer id="typeahead-container"></div>

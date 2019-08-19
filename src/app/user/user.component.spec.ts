@@ -45,8 +45,12 @@ describe('UserComponent', () => {
   });
 
   it('check users', fakeAsync(() => {
-    tick(8000);
+    const fixture1 = TestBed.createComponent(UserComponent);
+    const component1 = fixture1.componentInstance;
     fixture.detectChanges();
-    expect(component.users).toBeTruthy();
+    fixture1.detectChanges();
+    tick(8000);
+    fixture1.detectChanges();
+    expect(component1.users).toBeTruthy();
   }));
 });
